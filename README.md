@@ -1,2 +1,2 @@
-# html_and_css_projects
-Projects with html and css to practice.
+# html_css_and_js_projects
+Projects with html, css and js to practice.
