@@ -2,13 +2,14 @@
     --white: #FFFFFF;
     --black: #000000;
     --dark: #232830;
+    --disable: #e7e7e7;
     --very-light-pink: #C7C7C7;
     --text-input-field: #F7F7F7;
     --hospital-green: #ACD9B2;
     --background-icons: #FAFAFA;
 
     --mistake-label: #D25050;
-    --mistake--field: #FFF9F9;
+    --mistake-field: #FFF9F9;
 }
 * {
     box-sizing: border-box;
@@ -130,11 +131,11 @@ body {
 
 }
 .form-login__input--mistake{
-    background-color: var(--mistake--field);
+    background-color: var(--mistake-field);
     border: 1px solid var(--mistake-label);
 }
 
-.button-initial {
+.button { /*button initial*/
     height: 38px;
     
     color: black;
@@ -147,14 +148,18 @@ body {
     border-radius: 8px;
     border: none;
 }
-.button-primary {
+.button--primary {
     background-color: var(--hospital-green);
     color: var(--white);
 }
-.button-secondary {
+.button--secondary {
     background-color: var(--white);
     color: var(--hospital-green);
     border: solid 1px var(--hospital-green);
+}
+.button--disable {
+    background-color: var(--disable);
+    color: var(--white);
 }
 .form-login__button-bottom {
     position: absolute;
@@ -178,20 +183,4 @@ body {
 }
 .link:hover {
     text-decoration: underline;
-}
-@media screen and (min-width: 425px) {
-    .form-login {
-        width: 400px;
-    }
-    .form-login__button-bottom {
-        position: initial;
-    }
-}
-@media screen and (min-width: 768px) {
-    .navbar {
-        display: flex;
-    } 
-    .form-container {
-        height: calc(100vh - 54px);
-    } 
 }
