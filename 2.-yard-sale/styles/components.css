@@ -30,6 +30,7 @@ body {
     display: none;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.046805);
 }
 .navbar__left-list {
     display: flex;
@@ -64,12 +65,17 @@ body {
 .form-container {
     height: 100vh;
     width: 100%;
-
     display: flex;
     gap: 56px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.form-container--start {
+    justify-content: flex-start;
+    padding-top: 16px;
+    height: calc(100vh - 70px);
+
 }
 .form-login {
     width: 100%;
@@ -83,7 +89,13 @@ body {
 .form-login__image{
     height: 36px;
 }
+.my-acount-data {
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
 
+    padding: 22px 0;
+}
 .form-login__label-title, .form-login__label-subtitle, .form-login__text {
     text-align: center;
     font-size: 14px;
@@ -94,9 +106,13 @@ body {
     font-size: 18px;
     font-weight: 700;
     color: var(--black);
+    margin-bottom: 6px;
 }
 .form-login__text{
     color: var(--black);
+}
+.form-login__label-title--start, .form-login__label-subtitle--start{
+    text-align: start;
 }
 .form-login__icon-container {
     display: flex;
@@ -161,7 +177,7 @@ body {
     background-color: var(--disable);
     color: var(--white);
 }
-.form-login__button-bottom {
+.button--bottom {
     position: absolute;
     bottom: 26px;
     left: 16px;
@@ -183,4 +199,28 @@ body {
 }
 .link:hover {
     text-decoration: underline;
+}
+
+@media screen and (min-width: 425px) {
+    .form-login {
+        width: 400px;
+    }
+    .button--bottom {
+        position: initial;
+    }
+    .form-container--start {
+        padding-top: 0;
+        justify-content: center;
+    }
+}
+@media screen and (min-width: 768px) {
+    .navbar {
+        display: flex;
+    } 
+    .form-container {
+        gap: 0;
+    }
+    .form-login__image{
+        display: none;
+    }
 }
